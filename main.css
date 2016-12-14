@@ -1,0 +1,79 @@
+.outer-box{
+  width:200px;
+  height: 200px;
+  border: 10px solid navy;
+  position: relative;
+}
+.box{
+  width:100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  animation: 4s running-box infinite cubic-bezier(.61,.94,.71,-0.89)
+
+}
+body{
+    font-size: 30px;
+    font-family: tahoma;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color:red;
+        transition: 1s;
+        font-size: 10px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        background-color:lightblue;
+        transition: 1s;
+        font-size: 5px;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    body {
+        background-color:lightgreen;
+        transition: 1s;
+    }
+}
+@media (min-width: 980px) {
+   body {
+        background-color:orange;
+       transition: 1s;
+    }
+}
+@media (min-width: 1200px) {
+
+    body {
+        background-color:purple;
+        transition: 1s;
+    }
+}
+
+@keyframes running-box{
+  0%{
+    left: 0px;
+    top: 0px;
+  }
+  25%{
+    left: 100px;
+    top: 0px;
+    background: gold;
+  }
+  50%{
+    left: 100px;
+    top: 100px;
+    background: lightblue;
+  }
+  75%{
+    left: 0px;
+    top: 100px;
+    background: lightgreen;
+  }
+  100%{
+    left: 0px;
+    top: 0px;
+  }
+    
